@@ -4,18 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
-import { ReservationComponent } from './component/reservation/reservation.component';
-import { ReservationListComponent } from './component/reservation-list/reservation-list.component';
 import { LoginComponent } from './component/login/login.component';
+import { HomeComponent } from './component/home/home.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+import { BookingComponent } from './component/booking/booking.component';
 
 @NgModule({
   //componentes declarados, las vistas
   declarations: [
     AppComponent,
     HeaderComponent,
-    ReservationComponent,
-    ReservationListComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    AboutUsComponent,
+    BookingComponent
   ],
   //modulos importados
   imports: [

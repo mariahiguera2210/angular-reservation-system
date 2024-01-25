@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-header {
-    background-color: blue;
+.container-fluid {
+    background-color: rgba(189, 189, 240, 0.762);
+}
+.nav-link active {
+  color: brown;
 }
