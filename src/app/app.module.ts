@@ -9,6 +9,7 @@ import { HomeComponent } from './component/home/home.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { BookingComponent } from './component/booking/booking.component';
 
+
 @NgModule({
   //componentes declarados, las vistas
   declarations: [
@@ -17,7 +18,7 @@ import { BookingComponent } from './component/booking/booking.component';
     LoginComponent,
     HomeComponent,
     AboutUsComponent,
-    BookingComponent
+    BookingComponent,
   ],
   //modulos importados
   imports: [

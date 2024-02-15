@@ -9,5 +9,15 @@
   }
 
   .container-fluid{
-    background-color:#8b78c4 ;
+    display: flex;
+    align-items: center;
+    background-color:#f1eefb ;
+    height: 60px;
   }
+  .navbar-brand{
+    margin-top: 10px;
+    width: 90px;
+    height: auto;
+  }
+
+ 
