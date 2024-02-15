@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { BookingComponent } from './component/booking/booking.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 @NgModule({
   //componentes declarados, las vistas
@@ -17,7 +18,8 @@ import { BookingComponent } from './component/booking/booking.component';
     LoginComponent,
     HomeComponent,
     AboutUsComponent,
-    BookingComponent
+    BookingComponent,
+    NotFoundComponent
   ],
   //modulos importados
   imports: [
