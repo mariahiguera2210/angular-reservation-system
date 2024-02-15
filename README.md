@@ -1,27 +1,17 @@
-# AngularReservationSystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
+# Sistema de reservas medicas
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### 1. Qué es tu aplicación y como funciona?
+Mi aplicación es un sistema de reservas médicas, donde el usuario puede solicitar una cita con el médico especialista que necesite, de acuerdo a sus necesidades. Esta medico general, dentista, dermatólogo y nutricionista
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### 2.Qué funcionalidades tiene hasta este punto y que funcionalidades tienes planeadas agregar
+Para el primer sprint, se crearon los diferentes componentes header, home, bookig, about-us y login. Se les agregó estilos y se crearon las rutas correspondientes.
 
-## Build
+Lo que planeo hacer es, darle funcionalidad al login para que se genere el token y que el usuario pueda hacer la reserva de una cita médica también planeo que se puedan ver las citas médicas. Y si es posible, generar los roles de los medicos para que ellos puedan ver solo la lista de sus citas médicas y lo mismo con los usuarios. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+#### 3.Una explicación en tus palabras de alguno de los temas que más te haya gustado desde el último sprint
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La inyección de dependencias fué uno de los temas que me gustó, ya que es una manera de pasar funcionalidades que existen en un servicio a otro, de esta manera no hay que volver a copiar todo el código, haciendo que el éste sea más fácil de manejar y de probar
