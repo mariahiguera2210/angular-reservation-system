@@ -6,8 +6,18 @@
 
   button{
     margin-right: 15px ;
+    border-color: #b0b0b0;
+    color: black;
   }
 
   .container-fluid{
     background-color:#ede7ff ;
+    height: 80px;
   }
+
+  .navbar-brand{
+    height: 100%;
+    width: auto;
+  }
+  
+
