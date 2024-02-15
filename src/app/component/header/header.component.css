@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
   }
-.container-fluid {
-    background-color: rgba(189, 189, 240, 0.762);
-}
-.nav-link active {
-  color: brown;
-}
+
+  button{
+    margin-right: 15px ;
+  }
+
+  .container-fluid{
+    background-color:#8b78c4 ;
+  }
