@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-reservation-system';
 
-  changeTitle(){
-    this.title = "hola mundo";
-  }
 }
 
 

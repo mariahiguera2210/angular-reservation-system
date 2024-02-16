@@ -9,6 +9,7 @@ import { HomeComponent } from './component/home/home.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { BookingComponent } from './component/booking/booking.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   //componentes declarados, las vistas
@@ -19,12 +20,14 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
     HomeComponent,
     AboutUsComponent,
     BookingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
   ],
   //modulos importados
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   // en providers van los servicios que necesita este modulo.
   providers: [],
