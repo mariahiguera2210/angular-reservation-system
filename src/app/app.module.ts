@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//servicios
+import { AuthService } from './services/auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,8 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
 import { BookingComponent } from './component/booking/booking.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { RegisterComponent } from './component/register/register.component'
 
 @NgModule({
   //componentes declarados, las vistas
@@ -21,16 +25,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     BookingComponent,
     NotFoundComponent,
+    RegisterComponent,
 
   ],
   //modulos importados
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   // en providers van los servicios que necesita este modulo.
-  providers: [],
+  providers: [
+    AuthService
+  ],
   //vista raiz de la aplicacion
   bootstrap: [AppComponent]
 })
