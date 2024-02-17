@@ -19,5 +19,11 @@
     height: 100%;
     width: auto;
   }
+  #navbarTogglerDemo03{
+    background-color: #ede7ff;
+  }
+  .d-flex{
+    margin-bottom: 5px;
+  }
   
 
