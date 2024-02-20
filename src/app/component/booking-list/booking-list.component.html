@@ -1,4 +1,4 @@
-<div class="card-container">
+<div class="card-container" *ngIf="appointments.length > 0; else noAppointmentsTemplate">
   <mat-card class="appointment-card" *ngFor="let appointment of appointments">
     <mat-card-header>
       <mat-card-title class="card-title">{{ appointment.doctor.name }} {{ appointment.doctor.lastName }}</mat-card-title>
@@ -10,3 +10,6 @@
     </mat-card-content>
   </mat-card>
 </div>
+<ng-template #noAppointmentsTemplate>
+  <div>No hay reservaciones disponibles.</div>
+</ng-template>
