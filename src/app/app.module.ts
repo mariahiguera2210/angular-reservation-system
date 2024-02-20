@@ -28,6 +28,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { ReservationComponent } from './component/reservation/reservation.component';
 
 
 
@@ -44,6 +45,7 @@ import { MatCardModule } from '@angular/material/card';
     NotFoundComponent,
     RegisterComponent,
     BookingListComponent,
+    ReservationComponent,
 
   ],
   //modulos importados
