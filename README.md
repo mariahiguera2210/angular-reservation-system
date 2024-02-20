@@ -1,27 +1,16 @@
-# AngularReservationSystem
+# Sistema de reservas medicas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
 
-## Development server
+### 1. Qué es tu aplicación y como funciona?
+Mi aplicación es un sistema de reservas médicas, donde el usuario puede solicitar una cita con el médico especialista que necesite, de acuerdo a sus necesidades. Esta medico general, dentista, dermatólogo y nutricionista
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### 2. Qué funcionalidades tiene hasta este punto y que funcionalidades tienes planeadas agregar
+Para el segundo sprint se crearon los forms de login y register con sus respectivos validadores,  adicional se les dió funcionalidad, se cero un objeto de reservas para utilizar las directivas y mostrarlas. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Lo que planeo hacer es, crear el token, y hacer las peticiones http para agendar citas.  
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 3. Una explicación en tus palabras de alguno de los temas que más te haya gustado desde el último sprint
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La programación reactiva fué uno de los temas que me gustó, ya que me  ofrece un paradigma poderoso y flexible para desarrollar aplicaciones dinámicas y reactivas. Me permite escribir código más limpio, manejar de forma eficiente la asincronía y los flujos de datos, y construir aplicaciones robustas y escalables.
