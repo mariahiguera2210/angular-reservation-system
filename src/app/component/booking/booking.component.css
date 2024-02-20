@@ -1,0 +1,42 @@
+/* booking.component.css */
+
+.booking-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  mat-select,
+  mat-datepicker,
+  mat-input {
+    width: 100%;
+  }
+  
+  button[mat-raised-button] {
+    margin-top: 20px;
+  }
+  
+  .mdc-form-field {
+    margin-top: 2px;
+  }
+
+  button {
+    margin-left: 50px;
+  }
+  
+  /* Estilo adicional para mejorar la visualización en dispositivos móviles */
+  @media (max-width: 768px) {
+    .booking-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  

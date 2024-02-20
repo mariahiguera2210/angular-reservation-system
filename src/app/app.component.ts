@@ -8,9 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-reservation-system';
 
-  changeTitle(){
-    this.title = "hola mundo";
-  }
 }
 
 

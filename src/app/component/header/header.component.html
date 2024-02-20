@@ -1,2 +1,31 @@
-<header>soy header</header>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="assets/images/logo-fondo.png" class="navbar-brand" alt="logo">
+   
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/aboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/booking">Booking</a>
+          </li>
+        </ul>
+        <ng-template #loginTemplate >
+          <a class="login" aria-current="page" routerLink="/login" >Login</a>
+      </ng-template>
+        <div *ngIf="userInfo?.name; else loginTemplate">
+          <!-- Usa el operador de navegación segura al acceder a userInfo.name -->
+          <span class="navbar-text">{{ userInfo?.name }}</span>
+          <button class="btn btn-outline-danger" (click)="logout()">logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 

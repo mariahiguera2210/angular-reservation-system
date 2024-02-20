@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    height: 100%;
+    margin: 10%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    color: #2e2e2e;
+    text-align: center;
+}
+.contenedor {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 5em;
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  .contenedor p:nth-of-type(2) {
+    font-size: 0.9em;
+    color: #757575;
+  }

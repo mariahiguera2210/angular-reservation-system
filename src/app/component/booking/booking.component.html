@@ -1,0 +1,39 @@
+<div class="booking-container">
+    <form [formGroup]="bookingForm" (ngSubmit)="submit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Doctor</mat-label>
+            <mat-select formControlName="doctorId">
+                <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.name }}</mat-option>
+              </mat-select>              
+          </mat-form-field>
+          
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de la Cita</mat-label>
+        <input matInput [matDatepicker]="datePicker" formControlName="appointmentDate">
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Hora de Inicio</mat-label>
+        <input matInput type="time" formControlName="startTimeControl">
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Hora de Fin</mat-label>
+        <input matInput type="time" formControlName="endTimeControl">
+      </mat-form-field>
+      
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Motivo de la Visita</mat-label>
+        <input matInput formControlName="reasonForVisit">
+      </mat-form-field>
+  
+      <mat-checkbox formControlName="confirmed">Confirmar Cita</mat-checkbox>
+  
+      <button type="submit" mat-raised-button color="primary" [disabled]="!bookingForm.valid">Confirmar Reserva</button>
+    </form>
+  </div>
+  

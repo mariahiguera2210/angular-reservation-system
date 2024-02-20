@@ -1,0 +1,32 @@
+.card-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+  }
+  
+  .appointment-card {
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+  }
+  
+  .card-title {
+    color: #6a1b9a; /* Color morado para el título, ajusta según tu paleta */
+  }
+  
+  mat-card-content {
+    color: #333; /* Texto más oscuro para el contenido */
+    margin-top: 10px;
+  }
+  
+  mat-card-header {
+    background-color: #b39ddb; /* Fondo morado claro para el header */
+    color: #fff; /* Texto blanco en el header */
+  }
+  
+  mat-card-subtitle {
+    color: #f3e5f5; /* Subtítulos en un tono más claro */
+  }
+  

@@ -1,0 +1,12 @@
+<div class="card-container">
+  <mat-card class="appointment-card" *ngFor="let appointment of appointments">
+    <mat-card-header>
+      <mat-card-title class="card-title">{{ appointment.doctor.name }} {{ appointment.doctor.lastName }}</mat-card-title>
+      <mat-card-subtitle>{{ appointment.appointmentDate | date: 'short' }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p> <strong>Reason: </strong> {{ appointment.reasonForVisit }}</p>
+      <p> <strong>Status: </strong>  {{ appointment.confirmed ? 'Confirmed' : 'Pending' }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
