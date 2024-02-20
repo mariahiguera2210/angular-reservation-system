@@ -31,3 +31,4 @@ export class BookingService {
     return this.http.get(`${this.baseUrl}/doctor/${offset}/${limit}`);
   }
 }
+
