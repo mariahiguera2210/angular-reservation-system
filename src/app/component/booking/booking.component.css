@@ -24,8 +24,12 @@
     margin-top: 20px;
   }
   
-  mat-checkbox {
-    margin-top: 20px;
+  .mdc-form-field {
+    margin-top: 2px;
+  }
+
+  button {
+    margin-left: 50px;
   }
   
   /* Estilo adicional para mejorar la visualización en dispositivos móviles */
