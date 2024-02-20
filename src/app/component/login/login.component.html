@@ -1,3 +1,4 @@
+
 <section [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -31,6 +32,9 @@
                 </div>
               <label class="form-label" for="form3Example4">Password</label>
             </div>
+            <div *ngIf="loginError" class="alert alert-danger" [hidden]="showConfirmation">
+              {{ loginError }}
+            </div>
   
             <div class="d-flex justify-content-between align-items-center">
               <!-- Checkbox -->
@@ -46,10 +50,20 @@
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="submit" class="btn btn-primary btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register"
                   class="link-danger">Register</a></p>
+                  
             </div>
-            
+            <div id="confirmationPopup" class="popup-modal" *ngIf="showConfirmation">
+              <div class="popup-content">
+                <div class="popup-header">
+                  <span class="checkmark">&#10004;</span>
+                  <h2>Awesome!</h2>
+                </div>
+                <p>Login successful</p>
+                <button id="popupOkButton" type="button" (click)="closePopup()">OK</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

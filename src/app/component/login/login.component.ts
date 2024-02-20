@@ -4,6 +4,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,10 +14,13 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  showConfirmation: boolean = false;
+  loginError: string = '';
 
   constructor(
     private _builder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
   ) {
     this.loginForm = this._builder.group({});
   }
@@ -35,10 +39,19 @@ export class LoginComponent {
     this.authService.sendCredentials(email, password)
     .subscribe (
       response => {
-        console.log('logeado exitosamente');
+        this.showConfirmation= true;// mostrar popup
+        this.authService.getTokenClaims();
+        this.authService.getUserInfoFromCookie();
+        
       },
       err => {console.error('Usuario o Contraseña invalidos', err);
+      this.loginError = 'Invalid username or password'; 
+
       }
     )
+  }
+  closePopup(): void {
+    this.showConfirmation = false;
+    this.router.navigate(['/home']); // Navigate after closing the popup
   }
 }

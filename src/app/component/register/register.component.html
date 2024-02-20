@@ -1,1 +1,67 @@
-<p>register works!</p>
+<!-- Default form subscription -->
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="registerUser()"
+  class="text-center border border-light p-5"
+>
+  <div class="formContainer">
+    <p class="h4 mb-4">Register</p>
+
+    <input
+      formControlName="name"
+      type="text"
+      id="defaultSubscriptionFormName"
+      class="form-control"
+      placeholder="Name"
+    />
+    <div
+      class="alert alert-danger mt-0"
+      [hidden]="
+        registerForm.get('name')?.valid || registerForm.get('name')?.pristine
+      "
+    >
+      <span *ngIf="registerForm.get('name')?.hasError('required')"
+        >This field is required</span
+      >
+      <span *ngIf="registerForm.get('name')?.hasError('minlength')"
+        >Name has to be longer</span
+      >
+    </div>
+    <!-- Email -->
+    <input
+      formControlName="email"
+      type="text"
+      id="defaultSubscriptionFormEmail"
+      class="form-control"
+      placeholder="E-mail"
+    />
+    <div class="alert alert-danger mt-2 " [hidden]="registerForm.get('email')?.valid || registerForm.get('email')?.pristine">
+        <span *ngIf="registerForm.get('email')?.hasError('required')">This field is required</span>
+        <span *ngIf="registerForm.get('email')?.hasError('email')">email has to be valid</span>
+      </div>
+
+    <input
+      formControlName="password"
+      type="password"
+      id="defaultSubscriptionFormPassword"
+      class="form-control"
+      placeholder="Password"
+    />
+   
+
+    <!-- Sign in button -->
+    <button  class="btn btn-info btn-block" type="submit">Sign in</button>
+  </div>
+
+  <div id="confirmationPopup" class="popup-modal" *ngIf="showConfirmation">
+    <div class="popup-content">
+      <div class="popup-header">
+        <span class="checkmark">&#10004;</span>
+        <h2>Awesome!</h2>
+      </div>
+      <p>Register successful</p>
+      <button id="popupOkButton" type="button" (click)="closePopup()">OK</button>
+    </div>
+  </div>
+</form>
+<!-- Default form subscription -->
