@@ -28,6 +28,9 @@ export class AuthService {
         tap((token: string) => { // La respuesta es el token JWT como texto plano
           console.log(token);
           this.cookie.set('token', token, 1, '/'); // Guardar el token en las cooki
+          this.getTokenClaims();
+          const userInfo = this.getUserInfoFromCookie();
+          this.userInfoSource.next(userInfo);
         })
       );
   }
@@ -66,8 +69,9 @@ export class AuthService {
 
   logout(): void {
     this.cookie.delete('token', '/');
-    this.cookie.delete('userName', '/')
-    this.cookie.delete('userId', '/')
+    this.cookie.delete('userName', '/');
+    this.cookie.delete('userId', '/');
+    this.userInfoSource.next({}); // Limpiar la información del usuario
     this.router.navigate(['/login']);
   }
 

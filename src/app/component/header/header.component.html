@@ -16,14 +16,15 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/booking">Booking</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/login" >Login</a>
-          </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <ng-template #loginTemplate >
+          <a class="login" aria-current="page" routerLink="/login" >Login</a>
+      </ng-template>
+        <div *ngIf="userInfo?.name; else loginTemplate">
+          <!-- Usa el operador de navegación segura al acceder a userInfo.name -->
+          <span class="navbar-text">{{ userInfo?.name }}</span>
+          <button class="btn btn-outline-danger" (click)="logout()">logout</button>
+        </div>
       </div>
     </div>
   </nav>
