@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'aboutUs', component: AboutUsComponent},
-  {path: 'booking', component: BookingComponent, /*canActivate: [SessionGuard]*/},
+  {path: 'booking', component: BookingComponent, canActivate: [SessionGuard]},
   {path: 'register', component: RegisterComponent},
   {path: 'bookinglist', component: BookingListComponent},
   {path:'**', component: NotFoundComponent}

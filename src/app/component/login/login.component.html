@@ -14,7 +14,7 @@
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input formControlName="email" type="email" id="form3Example3" class="form-control form-control-lg"
-                placeholder="Enter a valid email address"  />
+                placeholder="Enter a valid email address" />
                 <div class="alert alert-danger mt-2 " [hidden]="loginForm.get('email')?.valid || loginForm.get('email')?.pristine">
                   <span *ngIf="loginForm.get('email')?.hasError('required')">This field is required</span>
                   <span *ngIf="loginForm.get('email')?.hasError('email')">email has to be valid</span>

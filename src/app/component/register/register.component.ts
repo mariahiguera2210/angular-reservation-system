@@ -48,7 +48,7 @@ export class RegisterComponent {
   }
   closePopup(): void {
     this.showConfirmation = false;
-    this.router.navigate(['/home']); // Navigate after closing the popup
+    this.router.navigate(['/home']); 
   }
     
 }
